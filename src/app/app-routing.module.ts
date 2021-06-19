@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { CotizadorPrendarioComponent } from './component/cotizador-prendario/cotizador-prendario.component';
+const routes: Routes = [
+  {
+    path: '',
+    component: CotizadorPrendarioComponent
+  },
+  {
+    path: 'cotizador',
+    component: CotizadorPrendarioComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

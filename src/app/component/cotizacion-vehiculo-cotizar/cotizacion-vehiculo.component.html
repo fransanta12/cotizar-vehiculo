@@ -1,0 +1,103 @@
+<!-- <div class="contenedor-divisor"> -->
+    <mat-card id="card-contenedor">
+        <mat-card-title>
+            <p class="title-datos">
+                Datos para cotizar su
+                <span style="font-size: 1.6rem !important;">vehículo</span>
+            </p>
+        </mat-card-title>
+        <mat-card-content style="margin-left: 25px;">
+            <p id="label-modena">Moneda:</p>
+            <mat-tab-group id="contenedor-tab">
+                <mat-tab label="$" class="iconos-tab" id="contenedor-dolar"> 
+                    <mat-list role="list" class="list-form" id="list-form">
+                        <!-- categoría -->
+                        <mat-list-item role="listitem" class="list_item">
+                            <p class="label-list">Categoría:</p>
+                            <div id="caegoria-option">
+                                <mat-radio-group aria-label="Categoría">
+                                    <mat-radio-button value="1">Particular&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-radio-button>
+                                    <mat-radio-button value="2">Carga liviana</mat-radio-button>
+                                  </mat-radio-group>
+                            </div>                                
+                        </mat-list-item>
+                        <!-- valor vehiculo -->
+                        <mat-list-item role="listitem" class="list_item datos-vehiculo-item">
+                            <span class="label-list exten-label">Valor del vehículo:
+                                <div class="etiqueta">
+                                    <button mat-icon-button color="primary" class="button-slider" (click)="value = value - step;" aria-label="Example icon button with a home icon">
+                                        <mat-icon>remove</mat-icon>
+                                      </button>
+                                    <input type="number" class="input-datos" step="{{step}}" min="{{minValue}}" max="{{maxValue}}" [(ngModel)]="value">
+                                    <button mat-icon-button color="primary" class="button-slider" (click)="value = value + step;"  aria-label="Example icon button with a home icon">
+                                    <mat-icon>add</mat-icon>
+                                  </button>
+                                </div>
+                            </span>
+                            <ngx-slider [(value)]="value" [(ngModel)]="value" [options]="options" #ctrl="ngModel"></ngx-slider>
+                        </mat-list-item>
+                        <!-- año -->
+                        <mat-list-item role="listitem" class="list_item datos-vehiculo-item">
+                            <span class="label-list exten-label">Año:
+                                <div class="etiqueta">
+                                    <button mat-icon-button color="primary" class="button-slider" (click)="valueA = valueA - stepA;" aria-label="Example icon button with a home icon">
+                                        <mat-icon>remove</mat-icon>
+                                      </button>
+                                    <input type="number" class="input-datos" step="{{stepA}}" min="{{minValueA}}" max="{{maxValueA}}" [(ngModel)]="valueA">
+                                    <button mat-icon-button color="primary" class="button-slider" (click)="valueA = valueA + stepA;"  aria-label="Example icon button with a home icon">
+                                    <mat-icon>add</mat-icon>
+                                  </button>
+                                </div>
+                            </span>
+                            <ngx-slider [(value)]="valueA" [(ngModel)]="valueA" [options]="optionsA" #ctrl="ngModel"></ngx-slider>
+                        </mat-list-item>
+                        <!-- prima -->
+                      <mat-list-item role="listitem" class="list_item datos-vehiculo-item">
+                        <span class="label-list exten-label">Prima:
+                            <div class="etiqueta">
+                                <button mat-icon-button color="primary" class="button-slider" (click)="valuePrima = valuePrima - stepPrima;" aria-label="Example icon button with a home icon">
+                                    <mat-icon>remove</mat-icon>
+                                  </button>
+                                <input type="number" class="input-datos" step="{{stepPrima}}" min="{{minValuePrima}}" max="{{maxValuePrima}}" [(ngModel)]="valuePrima">
+                                <button mat-icon-button color="primary" class="button-slider" (click)="valuePrima = valuePrima + stepPrima;"  aria-label="Example icon button with a home icon">
+                                <mat-icon>add</mat-icon>
+                              </button>
+                            </div>
+                        </span>
+                        <ngx-slider [(value)]="valuePrima" [(ngModel)]="valuePrima" [options]="optionsPrima" #ctrl="ngModel"></ngx-slider>
+                        </mat-list-item>
+                        <!-- plazo -->
+                        <mat-list-item role="listitem" class="list_item datos-vehiculo-item" *ngIf="this.iPrendarioCars != undefined">
+                            <span class="label-list exten-label">Plazo (meses):
+                                <div class="etiqueta">
+                                    <button mat-icon-button color="primary" class="button-slider" (click)="valuePlazo = valuePlazo - stepPlazo;" aria-label="Example icon button with a home icon">
+                                        <mat-icon>remove</mat-icon>
+                                      </button>
+                                    <input type="number" class="input-datos" step="{{stepPlazo}}" min="{{minValuePlazo}}" max="{{maxValuePlazo}}" [(ngModel)]="valuePlazo">
+                                    <button mat-icon-button color="primary" class="button-slider" (click)="valuePlazo = valuePlazo + stepPlazo;"  aria-label="Example icon button with a home icon">
+                                    <mat-icon>add</mat-icon>
+                                  </button>
+                                </div>
+                            </span>
+                            <ngx-slider [(value)]="valuePlazo" [(ngModel)]="valuePlazo" [options]="optionsPlazo" #ctrl="ngModel"></ngx-slider>
+                        </mat-list-item>
+                    </mat-list>
+                </mat-tab>
+                <mat-tab label="₡" class="iconos-tab" id="contenedor-colon" disabled>  </mat-tab>
+            </mat-tab-group>
+        </mat-card-content>
+    </mat-card>
+<!-- </div>
+<div class="contenedor-divisor">
+  2
+</div> -->
+<!-- <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+        2
+        
+        <br>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        2
+    </mat-grid-tile>
+</mat-grid-list> -->

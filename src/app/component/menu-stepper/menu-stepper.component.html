@@ -1,0 +1,64 @@
+<img src="../../../assets/img/logoPromerica.png" id="logo-arriba">
+  <mat-horizontal-stepper [linear]="isLinear" labelPosition="bottom" #stepper style="@media(min-width: 900px){padding: 0 75px 24px !important !important;}">
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel >Cotizador</ng-template>
+        <mat-form-field>
+          <div class="contenedor-divisor">
+            <app-cotizacion-vehiculo [iPrendarioCars]="iPrendarioCars"></app-cotizacion-vehiculo>
+          </div>
+          <div class="contenedor-divisor">
+            <app-resumen-cotizacion></app-resumen-cotizacion>
+          </div>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Siguiente</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Información">
+        <form [formGroup]="secondFormGroup">
+          <mat-form-field>
+              <!-- contenido -->
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                   required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Atrás</button>
+            <button mat-button matStepperNext disabled>Siguiente</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="thirdFormGroup" label="Documentos">
+        <form [formGroup]="thirdFormGroup">
+          <mat-form-field>
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                   required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Atrás</button>
+            <button mat-button matStepperNext disabled>Siguiente</button>
+          </div>
+        </form>
+      </mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
+      <ng-template matStepLabel>Preaprobación</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+
+    
+
+  </mat-horizontal-stepper>
+  <!-- Icon overrides. -->
+  <!-- <ng-template matStepperIcon="phone">
+    <mat-icon>call_end</mat-icon>
+  </ng-template>
+  <ng-template matStepperIcon="chat">
+    <mat-icon>forum</mat-icon>
+  </ng-template> -->

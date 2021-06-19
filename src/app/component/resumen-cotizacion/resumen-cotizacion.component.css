@@ -1,0 +1,23 @@
+.title-datos{
+    font-family: 'Museo Sans700' !important;
+    font-size: 1.4rem;
+    text-align: left;
+    border-bottom: 1px solid #69BE28;
+    color: #00693C;
+    padding-bottom: 2px;
+    margin-left: 25px;
+}
+#card-contenedor{
+    width:100%;
+    padding-left: 0;
+    background-color: transparent;
+    box-shadow: none;
+    height: 100%;
+}
+.mat-card-content{
+    /* height: 100%;
+    border-left: 1px solid #69BE28;
+    opacity: 1;
+    margin-left: 0 !important;
+    padding-left: 25px; */
+}
