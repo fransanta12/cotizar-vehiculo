@@ -1,5 +1,6 @@
 <img src="../../../assets/img/logoPromerica.png" id="logo-arriba">
-  <mat-horizontal-stepper [linear]="isLinear" labelPosition="bottom" #stepper style="@media(min-width: 900px){padding: 0 75px 24px !important !important;}">
+  <mat-horizontal-stepper [linear]="isLinear" labelPosition="bottom" id="menu-principal"
+  #stepper style="@media(min-width: 900px){padding: 0 75px 24px !important !important;}">
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
         <ng-template matStepLabel >Cotizador</ng-template>
