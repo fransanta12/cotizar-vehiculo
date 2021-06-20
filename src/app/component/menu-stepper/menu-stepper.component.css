@@ -9,6 +9,9 @@
     width: min-content;
     margin-left: 31%;
 }
+.division-pantalla{
+    border-left: 1px solid #69BE28;
+}
 #menu-principal .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:first-child)::before, [dir=rtl] .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:last-child)::before, .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:last-child)::after, [dir=rtl] .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:first-child)::after{
         border: none !important;
 }
@@ -40,7 +43,7 @@
     color: #FFFFFF;
     font-size: 39px;
     font-weight: 500;
-    font-family: 'Museo Sans500',Helvetica Neue,sans-serif;
+    font-family: 'Museo Sans',Helvetica Neue,sans-serif;
 }
 .mat-step-icon.mat-step-icon-state-number{
     height: 45px;
@@ -49,18 +52,18 @@
     color: #00693C;
     font-size: 39px;
     font-weight: 500;
-    font-family: 'Museo Sans500',Helvetica Neue,sans-serif;
+    font-family: 'Museo Sans',Helvetica Neue,sans-serif;
 }
 .mat-step-label.mat-step-label-active.mat-step-label-selected{
     text-align: center;
-    font: normal normal normal 20px/22px 'Museo Sans900';
+    font: normal normal normal 20px/22px 'Museo Sans';
     letter-spacing: 0px;
     color: #69BE28;
     opacity: 1;
 }
 .mat-step-label.mat-step-label-active{
     text-align: center;
-    font: normal normal normal 20px/22px 'Museo Sans100';
+    font: normal normal normal 20px/22px 'Museo Sans';
     letter-spacing: 0px;
     color: #00693C !important;
     opacity: 1;
@@ -92,7 +95,7 @@
     font-size: 39px;
     font-weight: 500;
     text-align: center;
-    font-family: 'Museo Sans500';
+    font-family: 'Museo Sans';
     letter-spacing: 0px;
     color: #FFFFFF !important;
     opacity: 1;
@@ -106,7 +109,7 @@
     width: 45px;
     height: 45px;
     text-align: center;
-    font: 'Museo Sans500';
+    font: 'Museo Sans';
     letter-spacing: 0px;
     color: #00693C;
     opacity: 1;
@@ -141,7 +144,7 @@
 ::ng-deep .mat-horizontal-stepper-header-container .mat-step-label.mat-step-label-active{
     padding-top: 0 !important;
     margin-top: 1.859px;
-    font-family: 'Museo Sans500';
+    font-family: 'Museo Sans';
     font-size: .7rem!important;
     color: #00693C;
 }

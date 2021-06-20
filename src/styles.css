@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@font-face{
+/* @font-face{
     font-family: Museo Sans100;
     scr:url(assets/fonts/museo_sans_100_regular-webfont.c5ee521f37dbb2d5f459.woff2);
 }
@@ -18,7 +18,62 @@
 @font-face{
     font-family: Museo Sans900;
     scr:url(assets/fonts/museosans_900-webfont.865787d999cf9aff16ec.woff2) format("opentype");
+} */
+@font-face {
+font-family: 'Museo Sans';
+src: url(assets/fonts/MuseoSans/MuseoSans/MuseoSans100Regular.otf)  format('opentype');
+font-weight: bold;
 }
+@font-face {
+    font-family: 'Museo Sans 100';
+    src:    url(../src/assets/fonts/MuseoSans/MuseoSans/MuseoSans_100.otf)  format('truetype'); /*Safari, Android, iOS*/
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Museo Sans 100 Italic';
+    src:    url(../src/assets/fonts/MuseoSans/MuseoSans/MuseoSans_100_Italic.otf)  format('truetype'); /*Safari, Android, iOS*/
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Museo Sans 300';
+    src:    url('../src/assets/fonts/MuseoSans/MuseoSans/MuseoSans_300.otf')  format('truetype'); /*Safari, Android, iOS*/
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Museo Sans 300 Italic';
+    src:    url('../src/assets/fonts/MuseoSans/MuseoSans/MuseoSans_300_Italic.otf')  format('truetype'); /*Safari, Android, iOS*/
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Museo Sans 500';
+    src:    url('../src/assets/fonts/MuseoSans/MuseoSans/MuseoSans_500.otf')  format('truetype'); /*Safari, Android, iOS*/
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Museo Sans 500 Italic';
+    src: url('../src/assets/fonts/MuseoSans/MuseoSans/MuseoSans_500_Italic.otf')  format('truetype'); /*Safari, Android, iOS*/
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Museo Sans 700';
+    src: url('../src/assets/fonts/MuseoSans/MuseoSans/MuseoSans_700.otf')  format('truetype'); /*Safari, Android, iOS*/
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Museo Sans 700 Italic';
+    src:    url('../src/assets/fonts/MuseoSans/MuseoSans/MuseoSans_700_Italic.otf')  format('truetype'); /*Safari, Android, iOS*/
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Museo Sans 900 Italic';
+    src:   url('../src/assets/fonts/MuseoSans/MuseoSans/MuseoSans_900_Italic.otf')  format('truetype'); /*Safari, Android, iOS*/
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Museo Sans 900';
+    src:    url(../src/assets/fonts/MuseoSans/MuseoSans/MuseoSans_900.otf)  format('opentype');
+    font-weight: bold;
+    }
 html,body { 
     font-weight: 500;
     line-height: 1.5;

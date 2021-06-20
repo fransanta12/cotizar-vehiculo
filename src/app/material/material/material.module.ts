@@ -10,6 +10,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import {MatSortModule} from '@angular/material/sort';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 // import { Ng5SliderModule } from 'ng5-slider';
 
 
@@ -34,7 +36,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     CommonModule,
     MatIconModule,
     MatSortModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDividerModule,
+    MatButtonModule
     // ,
     // Ng5SliderModule
   ],
