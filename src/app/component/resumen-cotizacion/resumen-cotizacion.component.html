@@ -6,23 +6,61 @@
         </p>
     </mat-card-title>
     <mat-card-content style="margin-left: 25px;">
-        <table>
-            <tr>
-              <th>Dessert (100g)</th>
-              <!-- <th mat-sort-header="calories">Calories</th>
-              <th mat-sort-header="fat">Fat (g)</th>
-              <th mat-sort-header="carbs">Carbs (g)</th>
-              <th mat-sort-header="protein">Protein (g)</th> -->
-            </tr>
-          
-            <tr>
-              <td>1</td>
-              <!-- <td>2</td>
-              <td>3</td>
-              <td>4</td>
-              <td>5</td> -->
-            </tr>
-          </table>
+      <!-- deuda -->
+      <table class="tabla">
+        <tr>
+          <th class="label-title">Deuda Total</th>
+          <th id=""></th>
+        </tr>
+      
+        <tr>
+          <td class="detalle">+ Monto a financiar</td>
+          <td class="detalle-valor">$19.440</td>
+        </tr>
+      </table>
+      <!-- Cuota -->
+      <table class="tabla">
+        <tr>
+          <th class="label-title">Cuota mensual total</th>
+          <th id=""></th>
+        </tr>
+      
+        <tr>
+          <td class="detalle">+ Cuota del préstamo</td>
+          <td class="detalle-valor">$300</td>
+        </tr>
+      </table>
+      <!-- seguros -->
+      <table class="tabla">
+        <tr>
+          <th class="label-title">Seguros opcionales</th>
+          <!-- <th id=""></th> -->
+          <th id=""></th>
+        </tr>
+      
+        <tr>
+          <td class="detalle"><mat-radio-button class="example-margin" value="after">Seguro de desempleo con cobertura a 6 meses</mat-radio-button></td>
+          <td class="detalle-valor">$50</td>
+        </tr>
+        <tr>
+          <td class="detalle"><mat-radio-button class="example-margin" value="after">Seguro de desempleo con cobertura a 12 meses</mat-radio-button></td>
+          <td class="detalle-valor">$50</td>
+        </tr>
+        <tr>
+          <!-- <td class="detalle"><mat-checkbox class="example-margin" [(ngModel)]="seguroVida">Seguros de vida</mat-checkbox></td> -->
+          <td class="detalle"><mat-checkbox class="example-margin">Seguros de vida</mat-checkbox></td>
+          <td class="detalle-valor fin-seguros">$50</td>
+        </tr>
+        <tr>
+          <td class="detalle total-seguro">Total:</td>
+          <td class="detalle-valor total-seguro-valor">$450</td>
+        </tr>
+        <tr>
+          <td class="detalle total-seguro">Monto a desembolsar</td>
+          <td class="detalle-valor total-seguro-valor">$19440</td>
+        </tr>
+      </table>
+      <div class="label-title">Seguros opcionales</div>
         
     </mat-card-content>
 </mat-card>

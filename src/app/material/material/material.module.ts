@@ -9,6 +9,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import {MatSortModule} from '@angular/material/sort';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 // import { Ng5SliderModule } from 'ng5-slider';
 
 
@@ -32,7 +33,8 @@ import {MatSortModule} from '@angular/material/sort';
     MatListModule,
     CommonModule,
     MatIconModule,
-    MatSortModule
+    MatSortModule,
+    MatCheckboxModule
     // ,
     // Ng5SliderModule
   ],

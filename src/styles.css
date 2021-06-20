@@ -35,7 +35,13 @@ html,body {
 }
 app-resumen-cotizacion{
     width: 100%;
+    padding-left: 50px;
 }
+app-cotizacion-vehiculo{
+    width: 100%;
+    padding-right: 15px;
+}
+
 /* .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
     background: #69BE28 0% 0% no-repeat padding-box;
     border: 1px solid #69BE28;

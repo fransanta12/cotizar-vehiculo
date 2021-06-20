@@ -22,7 +22,7 @@
                             </div>                                
                         </mat-list-item>
                         <!-- valor vehiculo -->
-                        <mat-list-item role="listitem" class="list_item datos-vehiculo-item">
+                        <mat-list-item role="listitem" class="list_item datos-vehiculo-item" *ngIf="mostrarValor == true">
                             <span class="label-list exten-label">Valor del vehículo:
                                 <div class="etiqueta">
                                     <button mat-icon-button color="primary" class="button-slider" (click)="value = value - step;" aria-label="Example icon button with a home icon">
@@ -34,7 +34,7 @@
                                   </button>
                                 </div>
                             </span>
-                            <ngx-slider [(value)]="value" [(ngModel)]="value" [options]="options" #ctrl="ngModel"></ngx-slider>
+                            <ngx-slider [(value)]="value" [(ngModel)]="value" [options]="optionsValor" #ctrl="ngModel"></ngx-slider>
                         </mat-list-item>
                         <!-- año -->
                         <mat-list-item role="listitem" class="list_item datos-vehiculo-item">
@@ -67,7 +67,7 @@
                         <ngx-slider [(value)]="valuePrima" [(ngModel)]="valuePrima" [options]="optionsPrima" #ctrl="ngModel"></ngx-slider>
                         </mat-list-item>
                         <!-- plazo -->
-                        <mat-list-item role="listitem" class="list_item datos-vehiculo-item" *ngIf="this.iPrendarioCars != undefined">
+                        <mat-list-item role="listitem" class="list_item datos-vehiculo-item" *ngIf="mostrarPlazo == true">
                             <span class="label-list exten-label">Plazo (meses):
                                 <div class="etiqueta">
                                     <button mat-icon-button color="primary" class="button-slider" (click)="valuePlazo = valuePlazo - stepPlazo;" aria-label="Example icon button with a home icon">
