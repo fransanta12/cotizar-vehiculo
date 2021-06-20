@@ -9,9 +9,6 @@
     width: min-content;
     margin-left: 31%;
 }
-.division-pantalla{
-    border-left: 1px solid #69BE28;
-}
 #menu-principal .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:first-child)::before, [dir=rtl] .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:last-child)::before, .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:last-child)::after, [dir=rtl] .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:first-child)::after{
         border: none !important;
 }

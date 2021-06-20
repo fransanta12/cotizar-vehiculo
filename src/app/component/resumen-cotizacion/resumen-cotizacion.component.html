@@ -56,12 +56,21 @@
           <td class="detalle total-seguro"><button mat-flat-button disabled class="button-detalle" disabled>Ver detalle de cuotas</button>Total:</td>
           <td class="detalle-valor total-seguro-valor">$450</td>
         </tr>
-        <tr>
+        <!-- <tr>
           <td class="detalle total-seguro">Monto a desembolsar:</td>
           <td class="detalle-valor total-seguro-valor">$19440</td>
+        </tr> -->
+      </table>
+      <table class="tabla-monto">       
+        <tr>
+          <td class="detalle total-desembolso">Monto a desembolsar:</td>
+          <td class="detalle-valor total-desembolso-valor">$19440</td>
         </tr>
       </table>
-      <div class="label-title">Seguros opcionales</div>
-        
+      <p class="leyenda-resumen">*Los valores de esta cotización son únicamente de referencia y puede variar según las condiciones de mercado.</p>
+        <mat-card-fooder class="acciones">
+          <button mat-flat-button disabled class="button-descarga" disabled><span>Descargar /<br class=""></span><span>Envir cotización</span></button>
+          <button mat-flat-button mat-button matStepperNext class="button-preaprobacion">Iniciar Preaprobación</button>
+        </mat-card-fooder>
     </mat-card-content>
 </mat-card>
