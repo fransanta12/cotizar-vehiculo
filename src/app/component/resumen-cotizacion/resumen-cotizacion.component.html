@@ -2,7 +2,6 @@
     <mat-card-title>
         <p class="title-datos">
             Resumen del financiamiento
-            <!-- <span style="font-size: 1.6rem !important;">vehículo</span> -->
         </p>
     </mat-card-title>
     <mat-card-content style="margin-left: 25px;">
@@ -15,7 +14,15 @@
       
         <tr>
           <td class="detalle">+ Monto a financiar</td>
-          <td class="detalle-valor">$19.440</td>
+          <td class="detalle-valor">${{montoFinanciar}}</td>
+        </tr>
+        <tr>
+          <td class="detalle">+ Comisión</td>
+          <td class="detalle-valor">${{comision}}</td>
+        </tr>
+        <tr>
+          <td class="detalle">Total a financiar</td>
+          <td class="detalle-valor">${{totalFinanciamiento}}</td>
         </tr>
       </table>
       <!-- Cuota -->
@@ -27,7 +34,11 @@
       
         <tr>
           <td class="detalle">+ Cuota del préstamo</td>
-          <td class="detalle-valor-negro">$300</td>
+          <td class="detalle-valor-negro">${{cuotaPrestamo}}</td>
+        </tr>
+        <tr>
+          <td class="detalle">+ Seguro del vehiculo obligatorio</td>
+          <td class="detalle-valor-negro">${{seguroVehiculo}}</td>
         </tr>
       </table>
       <!-- seguros -->
@@ -39,32 +50,28 @@
         </tr>
       
         <tr>
-          <td class="detalle-radio"><mat-radio-button class="example-margin" value="after">Seguro de desempleo con cobertura a 6 meses</mat-radio-button></td>
-          <td class="detalle-valor-negro">$50</td>
+          <td class="detalle-radio"><mat-radio-button class="example-margin" [(ngModel)]="sDesempleo" value="1">Seguro de desempleo con cobertura a 6 meses</mat-radio-button></td>
+          <td class="detalle-valor-negro">$0</td>
         </tr>
         <tr>
-          <td class="detalle-radio"><mat-radio-button class="example-margin" value="after">Seguro de desempleo con cobertura a 12 meses</mat-radio-button></td>
-          <td class="detalle-valor-negro">$50</td>
+          <td class="detalle-radio"><mat-radio-button class="example-margin" [(ngModel)]="sDesempleo" value="2">Seguro de desempleo con cobertura a 12 meses</mat-radio-button></td>
+          <td class="detalle-valor-negro">$0</td>
         </tr>
         <tr>
           <!-- <td class="detalle"><mat-checkbox class="example-margin" [(ngModel)]="seguroVida">Seguros de vida</mat-checkbox></td> -->
           <td class="detalle-radio"><mat-checkbox class="example-margin">Seguros de vida</mat-checkbox></td>
-          <td class="detalle-valor fin-seguros">$50</td>
+          <td class="detalle-valor fin-seguros">$0</td>
         </tr>
         <mat-divider class="raya-suma"></mat-divider>
         <tr>
           <td class="detalle total-seguro"><button mat-flat-button disabled class="button-detalle" disabled>Ver detalle de cuotas</button>Total:</td>
-          <td class="detalle-valor total-seguro-valor">$450</td>
+          <td class="detalle-valor total-seguro-valor">$0</td>
         </tr>
-        <!-- <tr>
-          <td class="detalle total-seguro">Monto a desembolsar:</td>
-          <td class="detalle-valor total-seguro-valor">$19440</td>
-        </tr> -->
       </table>
       <table class="tabla-monto">       
         <tr>
           <td class="detalle total-desembolso">Monto a desembolsar:</td>
-          <td class="detalle-valor total-desembolso-valor">$19440</td>
+          <td class="detalle-valor total-desembolso-valor">$0 (en proceso)</td>
         </tr>
       </table>
       <p class="leyenda-resumen">*Los valores de esta cotización son únicamente de referencia y puede variar según las condiciones de mercado.</p>

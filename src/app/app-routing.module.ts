@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CotizadorPrendarioComponent } from './component/cotizador-prendario/cotizador-prendario.component';
+import { MenuStepperComponent } from './component/menu-stepper/menu-stepper.component';
 const routes: Routes = [
   {
     path: '',
-    component: CotizadorPrendarioComponent
+    component: MenuStepperComponent
   },
   {
     path: 'cotizador',
-    component: CotizadorPrendarioComponent
+    component: MenuStepperComponent
   }
 ];
 

@@ -7,7 +7,6 @@ import { RestService } from './service/rest.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CotizadorPrendarioComponent } from './component/cotizador-prendario/cotizador-prendario.component';
 import { MaterialModule } from './material/material/material.module';
 import { MenuStepperComponent } from './component/menu-stepper/menu-stepper.component';
 
@@ -21,7 +20,6 @@ import { NgxMaskModule, IConfig } from 'ngx-mask';
 @NgModule({
   declarations: [
     AppComponent,
-    CotizadorPrendarioComponent,
     MenuStepperComponent,
     CotizacionVehiculoComponent,
     ResumenCotizacionComponent,

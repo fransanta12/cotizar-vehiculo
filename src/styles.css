@@ -111,3 +111,6 @@ app-cotizacion-vehiculo{
     color: #00693C;
     padding-bottom: 2px;
 }
+.mat-badge-content.mat-badge-active{
+    background:#69BE28;
+}

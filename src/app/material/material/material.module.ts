@@ -14,18 +14,12 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-// import { Ng5SliderModule } from 'ng5-slider';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 @NgModule({
   declarations: [],
   imports: [
-    // CommonModule,
-    // MatSidenavModule,
-    // MatStepperModule,
-    // MatGridListModule,
-    // MatTabsModule,
-    // MatCardModule
   ],
   exports:[
     MatSidenavModule,
@@ -42,8 +36,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatDividerModule,
     MatButtonModule,
     MatInputModule,
-    MatFormFieldModule
-    // Ng5SliderModule
+    MatFormFieldModule,
+    MatBadgeModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

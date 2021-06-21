@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Options } from '@angular-slider/ngx-slider';
 import { IPrendarioCars } from '../../models/iprendario-cars';
 import { RestService } from '../../service/rest.service';
@@ -26,50 +26,7 @@ export class CotizacionVehiculoComponent implements OnInit {
   public maxValue: number = 75000;
   public step: number = 2500;
   public optionsValor: Options = new Options();
-  // {
-  //   showTicksValues: true,
-  //   animateOnMove:true,
-  //   animate:true,
-  //   stepsArray: [
-  //     {value: 5000, legend: '<div class="etiqueta-legend"></div>5.000'},
-  //     {value:7000},
-  //     {value:9000},
-  //     {value:11000},
-  //     {value:13000},
-  //     {value:15000},
-  //     {value:17000},
-  //     {value:19000},
-  //     {value:21000},
-  //     {value:23000, legend: '<div class="etiqueta-legend"></div>22.500'},
-  //     {value:25000},
-  //     {value:27000},
-  //     {value:29000},
-  //     {value:31000},
-  //     {value:33000},
-  //     {value:35000},
-  //     {value:37000},
-  //     {value:39000},
-  //     {value:41000, legend: '<div class="etiqueta-legend"></div>40.000'},
-  //     {value:43000},
-  //     {value:45000},
-  //     {value:47000},
-  //     {value:49000},
-  //     {value:51000},
-  //     {value:53000},
-  //     {value:55000},
-  //     {value:57000, legend: '<div class="etiqueta-legend"></div>57.500'},
-  //     {value:59000},
-  //     {value:61000},
-  //     {value:63000},
-  //     {value:65000},
-  //     {value:67000},
-  //     {value:69000},
-  //     {value:71000},
-  //     {value:73000},
-  //     {value:75000, legend: '<div class="etiqueta-legend"></div>75.000'}
-  //   ]
-  // };
-  // año
+  
   public valueA: number = 2019;
   public minValueA: number = 2009;
   public maxValueA: number = 2019;
@@ -123,6 +80,7 @@ export class CotizacionVehiculoComponent implements OnInit {
   }
 
   ngOnChanges() {
+
   }
 
   obtener(valores: IPrendarioCars){

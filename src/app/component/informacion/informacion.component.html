@@ -2,10 +2,7 @@
     <!-- <div class="contenedor-divisor"> -->
         <mat-card class="contenedor-info-personal">
             <mat-card-title>
-                <p class="title-datos">
-                    Información personal
-                    <!-- <span style="font-size: 1.6rem !important;">vehículo</span> -->
-                </p>
+                <p class="title-datos">Información personal</p>
             </mat-card-title>
             <mat-card-content class="info-card-content">
                 <mat-list role="list" class="list-form" >
@@ -109,28 +106,57 @@
                                 <mat-radio-button class="radio-separador" value="2">independiente</mat-radio-button>
                                 <mat-radio-button value="2">Mixto</mat-radio-button>
                             </mat-radio-group>
-                        </div>                                 -->
+                        </div>                                 
                     </mat-list-item>
                     <mat-list-item role="listitem" class="list_item item-cedula">
                         <p id="label-modena">Moneda:</p>
                         <mat-tab-group id="contenedor-monedas">
-                            <mat-tab label="$" class="iconos-tab" id="contenedor-dolar">  </mat-tab>
-                            <mat-tab label="₡" class="iconos-tab" id="contenedor-colon">  </mat-tab>
+                            <mat-tab label="$" (click)="moneda = '$'" class="iconos-tab" id="contenedor-dolar">  </mat-tab>
+                            <mat-tab label="₡" (click)="moneda = '₡'" class="iconos-tab" id="contenedor-colon">  </mat-tab>
                         </mat-tab-group>
-                        <!-- <span style="width: 100%;">
-                            <p class="label-list">Cédula:</p>
-                            <form class="input-dato">
-                                <table cellspacing="0"><tr>
-                                <td><mat-form-field >
-                                  <input matInput placeholder="99-9999-9999" [formControl]="cedulaFormControl" class="input-cedula1"value="cedula" [(ngModel)]="cedula" mask="99-9999-9999">
-                                  <mat-error *ngIf="cedulaFormControl.hasError('required')">
-                                    Cédula es un campo <strong>requerido</strong>
-                                  </mat-error>
-                                </mat-form-field></td>
-                              </tr></table>
-                            </form>
-                        </span>                         -->
+                        
                     </mat-list-item>
+                    <mat-list-item role="listitem" class="list_item item-cedula">
+                            <span style="width: 100%;">
+                                <p class="label-list">
+                                        <span matBadge="¡" matBadgeOverlap="false">Ingreso Bruto:</span>
+                                </p>
+                                <form class="input-dato">
+                                    <table class="example-full-width" cellspacing="0"><tr>
+                                      <td><mat-form-field class="example-full-width">
+                                        <input matInput  [(ngModel)]="bruto" [formControl]="brutoFormControl" placeholder="{{moneda}}">
+                                        <mat-error *ngIf="nombreFormControl.hasError('required')">
+                                            Ingreso Bruto es un campo <strong>requerido</strong>
+                                          </mat-error>
+                                      </mat-form-field></td>
+                                    </tr></table>
+                                  </form>                           
+                            </span>                        
+                        </mat-list-item>
+                        <mat-list-item role="listitem" class="list_item item-cedula">
+                            <span style="width: 100%;">
+                                <p class="label-list">
+                                        <span matBadge="¡" matBadgeOverlap="false">Ingreso Neto:</span>
+                                    </p>
+                                <form class="input-dato">
+                                    <table class="example-full-width" cellspacing="0"><tr>
+                                      <td><mat-form-field class="example-full-width">
+                                        <input matInput  [(ngModel)]="neto" [formControl]="netoFormControl" placeholder="{{moneda}}">
+                                        <mat-error *ngIf="nombreFormControl.hasError('required')">
+                                            Ingreso Neto es un campo <strong>requerido</strong>
+                                          </mat-error>
+                                      </mat-form-field></td>
+                                    </tr></table>
+                                  </form>                           
+                            </span>                        
+                        </mat-list-item>
+                        <mat-list-item role="listitem" class="list_item item-cedula">
+                            <span style="width: 100%;">
+                                <p class="label-list">
+                                        <span matBadge="¡" matBadgeOverlap="false">Antigüedad Laboral:</span>
+                                </p>
+                            </span>                        
+                        </mat-list-item>
                 </mat-list>
             </mat-card-content>
         </mat-card>

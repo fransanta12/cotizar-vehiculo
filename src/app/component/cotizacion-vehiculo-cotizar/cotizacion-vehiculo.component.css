@@ -1,15 +1,4 @@
 
-.mat-grid-tile{
-    /* padding-top: 124px !important; */
-}
-/* .title-datos{
-    font-family: 'Museo Sans 700' !important;
-    font-size: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #69BE28;
-    color: #00693C;
-    padding-bottom: 2px;
-} */
 .titulo-strong{
     font-size: 1.2rem !important;
 }
@@ -60,12 +49,6 @@
 .mat-ripple.mat-tab-header-pagination.mat-tab-header-pagination-before.mat-elevation-z4.mat-tab-header-pagination-disabled{
     display: none !important;
 }
-.list-form{
-
-}
-.list-form .list_item{
-    /* display: inline; */
-}
 .list-form .list_item.datos-vehiculo-item{
     height: 134px;
 }
@@ -81,7 +64,6 @@
     position: absolute;
     top: 18px;
     font-weight: normal;
-    /* align-self: flex-end; */
     margin-bottom: 0;
 }
 .list-form .list_item .mat-list-item-content #caegoria-option{
@@ -106,9 +88,6 @@
 .mat-radio-inner-circle{
     background-color: #00693c !important;
 }
-.mat-list-base .mat-list-item, .mat-list-base .mat-list-option{
-    /* height: min-content !important; */
-}
 .mat-tab-body.mat-tab-body-active {
     height: 138px;
 }
@@ -125,9 +104,6 @@
 }
 .ngx-slider-inner-tooltip.ng-star-inserted{
     display: none;
-}
-.ngx-slider-tick.ng-star-inserted{
-    /* display: none; */
 }
 .ngx-slider .ngx-slider-tick{
     background: none !important;
@@ -186,3 +162,4 @@ visibility: inherit !important;
 .mat-icon.notranslate.material-icons.mat-icon-no-color{
     color:#69BE28;
 }
+

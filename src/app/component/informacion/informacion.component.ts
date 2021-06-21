@@ -15,6 +15,12 @@ export class InformacionComponent implements OnInit {
   public correo: string="";
   public TipoIdentificacion:number=1;
   public TipoIngreso:number=1;
+  public moneda:string="$";
+
+  public bruto: number=0;
+  public neto: number=0;
+  public antiguedadLaboral: number=6;
+
   
   public cedulaFormControl = new FormControl('', [
     Validators.required
@@ -29,6 +35,12 @@ export class InformacionComponent implements OnInit {
     Validators.required,
     Validators.email,
   ]);
+  public brutoFormControl = new FormControl('', [
+    Validators.required
+  ]);
+  public netoFormControl = new FormControl('', [
+    Validators.required
+  ]);
   
 
   constructor() { }
@@ -36,6 +48,9 @@ export class InformacionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getMoneda(){
+
+  }
   
 
 }
