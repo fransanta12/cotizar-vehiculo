@@ -12,6 +12,8 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 // import { Ng5SliderModule } from 'ng5-slider';
 
 
@@ -38,8 +40,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatSortModule,
     MatCheckboxModule,
     MatDividerModule,
-    MatButtonModule
-    // ,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule
     // Ng5SliderModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]

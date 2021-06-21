@@ -15,6 +15,8 @@ import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
 import { CotizacionVehiculoComponent } from './component/cotizacion-vehiculo-cotizar/cotizacion-vehiculo.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { ResumenCotizacionComponent } from './component/resumen-cotizacion/resumen-cotizacion.component';
+import { InformacionComponent } from './component/informacion/informacion.component';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { ResumenCotizacionComponent } from './component/resumen-cotizacion/resum
     CotizadorPrendarioComponent,
     MenuStepperComponent,
     CotizacionVehiculoComponent,
-    ResumenCotizacionComponent
+    ResumenCotizacionComponent,
+    InformacionComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { ResumenCotizacionComponent } from './component/resumen-cotizacion/resum
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxSliderModule
+    NgxSliderModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [RestService],
   bootstrap: [AppComponent],

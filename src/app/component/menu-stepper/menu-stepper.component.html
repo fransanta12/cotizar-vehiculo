@@ -4,7 +4,6 @@
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
         <ng-template matStepLabel >Cotizador</ng-template>
-        <mat-form-field>
           <div class="contenedor-divisor">
             <app-cotizacion-vehiculo [iPrendarioCars]="iPrendarioCars" ></app-cotizacion-vehiculo>
           </div>
@@ -12,7 +11,6 @@
             <mat-divider [vertical]="true" class="division-pantalla"></mat-divider>
             <app-resumen-cotizacion></app-resumen-cotizacion>
           </div>
-        </mat-form-field>
         <div>
           <button mat-button matStepperNext>Siguiente</button>
         </div>
@@ -20,12 +18,7 @@
     </mat-step>
     <mat-step [stepControl]="secondFormGroup" label="Información">
         <form [formGroup]="secondFormGroup">
-          <mat-form-field>
-              <!-- contenido -->
-            <mat-label>Address</mat-label>
-            <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                   required>
-          </mat-form-field>
+          <app-informacion></app-informacion>
           <div>
             <button mat-button matStepperPrevious>Atrás</button>
             <button mat-button matStepperNext disabled>Siguiente</button>
@@ -34,11 +27,7 @@
       </mat-step>
       <mat-step [stepControl]="thirdFormGroup" label="Documentos">
         <form [formGroup]="thirdFormGroup">
-          <mat-form-field>
-            <mat-label>Address</mat-label>
-            <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                   required>
-          </mat-form-field>
+          
           <div>
             <button mat-button matStepperPrevious>Atrás</button>
             <button mat-button matStepperNext disabled>Siguiente</button>

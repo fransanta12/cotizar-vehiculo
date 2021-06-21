@@ -129,11 +129,6 @@
     display: none !important;
 }
 
-::ng-deep mat-step-header{
-    /* height: 93px;
-    width: 93px; */
-}
-
 /* palabras debajo del stepper */
 ::ng-deep .mat-horizontal-stepper-header-container .mat-step-label.mat-step-label-active.mat-step-label-selected{
     color: #69be28!important;
