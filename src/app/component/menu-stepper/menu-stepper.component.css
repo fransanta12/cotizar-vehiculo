@@ -27,12 +27,9 @@
     border-top-width: 15px!important;
     margin: 0!important;
     flex: none!important;
-}
-@media (max-width: 992px){
-    mat-horizontal-stepper {
-        display: none!important;   
-    }
-}
+    
+} 
+
 .mat-step-icon.mat-step-icon-state-number.mat-step-icon-selected{
     height: 45px;
     width: 45px;
@@ -52,10 +49,10 @@
     font-family: 'Museo Sans',Helvetica Neue,sans-serif;
 }
 .mat-step-label.mat-step-label-active.mat-step-label-selected{
-    text-align: center;
+    text-align: center !important;
     font: normal normal normal 20px/22px 'Museo Sans';
     letter-spacing: 0px;
-    color: #69BE28;
+    color: #69BE28 !important;
     opacity: 1;
 }
 .mat-step-label.mat-step-label-active{
@@ -64,8 +61,11 @@
     letter-spacing: 0px;
     color: #00693C !important;
     opacity: 1;
+    padding-top: 8px !important;
 }
-
+.mar-step-header.cdk-keyboard-focused, .mat-step-header.cdk-program-focused,.mat-step-header:hover{
+    background-color: transparent !important;
+}
 ::ng-deep .mat-horizontal-stepper-header-container {
     margin-left: 31%;
 }

@@ -1,5 +1,5 @@
 <mat-spinner class="spinner-carga" *ngIf="iPrendarioCars == undefined"></mat-spinner>
-<div *ngIf="iPrendarioCars != undefined">
+<div *ngIf="iPrendarioCars != undefined" class="component-cotizacion">
   <div class="contenedor-divisor" >
     <!-- <app-cotizacion-vehiculo [iPrendarioCars]="iPrendarioCars" ></app-cotizacion-vehiculo> -->
     <mat-card id="card-contenedor">
@@ -9,7 +9,7 @@
                 <span class="titulo-strong">vehículo</span>
             </p>
         </mat-card-title>
-        <mat-card-content style="margin-left: 25px;">
+        <mat-card-content style="margin-left: 25px;margin-top: 25px;">
             <p id="label-modena">Moneda:</p>
             <mat-tab-group id="contenedor-tab">
                 <mat-tab label="$" class="iconos-tab" id="contenedor-dolar"> 

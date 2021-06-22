@@ -55,7 +55,7 @@
 .list-form .list_item .mat-list-item-content{
     padding: 0 0 !important;
 }
-.list-form .list_item .mat-list-item-content .label-list{
+.component-cotizacion .list-form .list_item .mat-list-item-content .label-list{
     font-family: 'Museo Sans 500 italic';
     letter-spacing: 0px;
     text-align: center;
@@ -99,6 +99,11 @@
     width: 434.562px;
     margin-left: 6%;
 }
+.ngx-slider-span.ngx-slider-tick-legend.ng-star-inserted{
+    color:#898B8C !important;
+    font-size: 15 !important;
+    font-family: 'Museo Sans 500';
+}
 .ngx-slider .ngx-slider-bar {
     height: 12px !important;
 }
@@ -119,6 +124,9 @@
     background: #00693c url(../../../assets/img/slider-icon.0491c7195cfb7b454a70.png) no-repeat 50%;
     background-size: 16px 14px;
     box-shadow: 0 4px 5px rgb(0 0 0 / 40%);
+    height: 20px;
+    width: 20px;
+    top: -5px;
 }
 .ngx-slider-span.ngx-slider-pointer.ngx-slider-pointer-min::after{
     background: none !important;
@@ -147,13 +155,13 @@
     font-size: 18px;
 }
 .button-slider{
-    border: 1px solid #898B8C;
-    border-radius: 8px;
+    border: 1px solid #898B8C !important;
+    border-radius: 8px !important;
     opacity: 1;
     background-color: transparent;
-    width: 30px;
-    height: 28px;
-    padding: unset;
+    width: 30px !important;
+    height: 30px !important;
+    padding: unset !important;
 }
 .ngx-slider-span.ngx-slider-bar-wrapper.ngx-slider-selection-bar{
 color: #63CECA;
@@ -161,6 +169,7 @@ visibility: inherit !important;
 }
 .mat-icon.notranslate.material-icons.mat-icon-no-color{
     color:#69BE28;
+    margin-bottom: 10px;
 }
 .ngx-slider .ngx-slider-selection{
     background: #63CECA 0% 0% no-repeat padding-box !important;
@@ -400,4 +409,7 @@ visibility: inherit !important;
 }
 .seguro-desempleo{
     display: table-row-group;   
+}
+.ngx-slider .ngx-slider-bar {
+    border-radius: 15px !important;
 }

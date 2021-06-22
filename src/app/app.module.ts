@@ -13,7 +13,6 @@ import { MenuStepperComponent } from './component/menu-stepper/menu-stepper.comp
 import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
 import { CotizacionVehiculoComponent } from './component/cotizacion-vehiculo-cotizar/cotizacion-vehiculo.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
-import { ResumenCotizacionComponent } from './component/resumen-cotizacion/resumen-cotizacion.component';
 import { InformacionComponent } from './component/informacion/informacion.component';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 
@@ -22,7 +21,6 @@ import { NgxMaskModule, IConfig } from 'ngx-mask';
     AppComponent,
     MenuStepperComponent,
     CotizacionVehiculoComponent,
-    ResumenCotizacionComponent,
     InformacionComponent
   ],
   imports: [

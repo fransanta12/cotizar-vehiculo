@@ -2,25 +2,31 @@
 <img src="../../../assets/img/logoPromerica.png" id="logo-arriba">
   <mat-horizontal-stepper [linear]="isLinear" labelPosition="bottom" id="menu-principal"
   #stepper style="@media(min-width: 900px){padding: 0 75px 24px !important !important;}">
-    <mat-step [stepControl]="firstFormGroup">
+    <mat-step [stepControl]="firstFormGroup" style="color: #69BE28;">
       <form [formGroup]="firstFormGroup">
         <ng-template matStepLabel >Cotizador</ng-template>
         <app-cotizacion-vehiculo [iPrendarioCars]="iPrendarioCars" ></app-cotizacion-vehiculo>
         <div>
-          <button mat-button matStepperNext>Siguiente</button>
+          <!-- <button mat-button matStepperNext>Siguiente</button> -->
         </div>
       </form>
     </mat-step>
     <mat-step [stepControl]="secondFormGroup" label="Información">
         <form [formGroup]="secondFormGroup">
           <app-informacion></app-informacion>
-          <div>
-            <button mat-button matStepperPrevious>Atrás</button>
-            <button mat-button matStepperNext disabled>Siguiente</button>
+          <div class="footer-infomation">
+            <mat-divider [vertical]="true" class="division-pantalla-footer"></mat-divider>
+            <button mat-button matStepperPrevious class="previous-mando">
+              <span class="icons-flecha-right">
+                </span>Atrás</button>
+                <mat-divider [vertical]="true" class="division-pantalla-footer-vertical"></mat-divider>
+            <button mat-button matStepperNext disabled class="previous-mando">
+              <span class="icons-flecha-left"></span>
+              Siguiente</button>
           </div>
         </form>
       </mat-step>
-      <mat-step [stepControl]="thirdFormGroup" label="Documentos">
+      <mat-step [stepControl]="thirdFormGroup" disabled label="Documentos">
         <form [formGroup]="thirdFormGroup">
           
           <div>
@@ -29,7 +35,7 @@
           </div>
         </form>
       </mat-step>
-    <mat-step [stepControl]="thirdFormGroup">
+    <mat-step [stepControl]="thirdFormGroup" disabled>
       <ng-template matStepLabel>Preaprobación</ng-template>
       <p>You are now done.</p>
       <div>
