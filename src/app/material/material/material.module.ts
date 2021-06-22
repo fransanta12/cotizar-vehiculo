@@ -16,7 +16,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-
+import {MatRippleModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [],
@@ -39,7 +39,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatInputModule,
     MatFormFieldModule,
     MatBadgeModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatRippleModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

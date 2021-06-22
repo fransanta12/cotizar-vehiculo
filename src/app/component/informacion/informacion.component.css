@@ -100,3 +100,37 @@ input.ng-pristine.ng-valid.ng-touched{
 .adicional-margen{
     margin-top: 60px;
 }
+.contenedor-button-antiguedad{
+    margin-top: 75px;
+    display: inline-flex;
+}
+.button-antiguedad{
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    font: normal normal 30px/44px 'Museo Sans 900 italic';
+    letter-spacing: 0px;
+    color: #69BE28;
+    opacity: 1;
+}
+.button-antiguedad-centro{
+    width: 140px;
+    height: 40px;
+    margin: 0 55.25px;
+    text-align: center;
+    font: normal normal 30px/44px 'Museo Sans 900 italic';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    background: #63CECA 0% 0% no-repeat padding-box;
+}
+.aceptar-terminos{
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    font: normal normal normal 30px/33px Museo Sans 700;
+    letter-spacing: 0px;
+    color: #69BE28;
+    opacity: 1;
+    margin-top: 20px;
+}
