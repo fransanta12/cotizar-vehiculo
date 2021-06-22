@@ -15,6 +15,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatProgressSpinnerModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

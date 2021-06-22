@@ -50,10 +50,10 @@ export class CotizacionVehiculoComponent implements OnInit {
     ]
   };
   // Prima
-  public valuePrima: number = 5504;
-  public minValuePrima: number = 2400;
-  public maxValuePrima: number = 80000;
-  public stepPrima: number = 776;
+  public valuePrima: number = 1000;
+  public minValuePrima: number = 1000;
+  public maxValuePrima: number = 4000;
+  public stepPrima: number = 50;
   public optionsPrima: Options= new Options();
 
   // Plazo (meses)
@@ -62,6 +62,20 @@ export class CotizacionVehiculoComponent implements OnInit {
   public maxValuePlazo: number = 96;
   public stepPlazo: number = 1;
   public optionsPlazo: Options= new Options();
+
+  // detalle
+  public sVida:boolean=false;
+  public sDesempleo:number=0;
+
+  montoFinanciar:number=0;
+  comision:number=0;
+  totalFinanciamiento:number=0;
+  cuotaPrestamo:number=0;
+  seguroVehiculo:number=0;
+  seguroVida:number=0;
+  public seguroDesempleo6:number = 0
+  public seguroDesempleo12:number = 0
+  // fin detalle
 
   /***
    * restService: enlace al servicio
@@ -73,6 +87,7 @@ export class CotizacionVehiculoComponent implements OnInit {
       console.log(res);
       this.AddPlazo();
       this.AddDataValor();
+      this.MontoTotalFinanciar()
     });
    }
 
@@ -80,14 +95,13 @@ export class CotizacionVehiculoComponent implements OnInit {
   }
 
   ngOnChanges() {
-
-  }
-
-  obtener(valores: IPrendarioCars){
-    this.iPrendarioCars = valores;
-    console.log(this.iPrendarioCars);
     
   }
+  public sliderEvent() {
+    this.MontoTotalFinanciar();
+}
+
+ 
 
   AddDataValor(){
     if(this.iPrendarioCars != undefined){
@@ -131,33 +145,33 @@ export class CotizacionVehiculoComponent implements OnInit {
   public AddDatePrima(){
     let stepsArray= [];
     for(let i=this.minValuePrima;i<=this.maxValuePrima;i+=this.stepPrima){
-      if(i==2400){
+      if(i==1000){
         stepsArray.push({
-          value: 2400, 
-          legend: '<div class="etiqueta-legend"></div>2.400'
+          value: 1000, 
+          legend: '<div class="etiqueta-legend"></div>1000'
         });
       }
-      if (i==20248) {
+      if (i==1750) {
         stepsArray.push({
-          value: 20248, 
-          legend: '<div class="etiqueta-legend"></div>20.248'
+          value: 2000, 
+          legend: '<div class="etiqueta-legend"></div>1750'
         });
       } 
-      if (i==40424) {
+      if (i==2500) {
         stepsArray.push({
-          value: 40424, 
-          legend: '<div class="etiqueta-legend"></div>40.424'
+          value: 2500, 
+          legend: '<div class="etiqueta-legend"></div>2500'
         });
       } 
-      if (i==60600) {
+      if (i==3250) {
         stepsArray.push({
-          value: 60600, 
-          legend: '<div class="etiqueta-legend"></div>60.600'
+          value: 3250, 
+          legend: '<div class="etiqueta-legend"></div>3250'
         });
       }
-      if (i==80000) {
+      if (i==4000) {
         stepsArray.push({
-          value: 80000, 
+          value: 4000, 
           legend: '<div class="etiqueta-legend"></div>80.000'
         });
       }else {
@@ -212,6 +226,42 @@ export class CotizacionVehiculoComponent implements OnInit {
       };
       console.log(this.optionsPlazo)
       this.mostrarPlazo = true;
+    }    
+  }
+
+  /**
+   * detalle
+   */
+  MontoTotalFinanciar(){
+    console.log("desempleo " + this.sDesempleo)
+    console.log("detalle en cotizacion")
+    console.log(this.value)
+    console.log(this.valuePrima)
+    if(this.iPrendarioCars != undefined){
+      this.montoFinanciar = this.value-this.valuePrima;
+      this.comision = this.montoFinanciar*(this.iPrendarioCars.values.usd.years[0].commission/100);
+      this.totalFinanciamiento = this.montoFinanciar + this.comision;
+      this.cuotaPrestamo = this.totalFinanciamiento * (this.iPrendarioCars.values.cuota/100);
+      this.seguroVehiculo = this.cuotaPrestamo*(this.iPrendarioCars.values.usd.years[0].insuranceCoverage.CoberturaA.value/100);
+    }    
+  }
+  calculoSeguroDesempleo(){
+    if(this.iPrendarioCars != undefined){
+      this.seguroDesempleo6 = this.seguroDesempleo12 = 0;
+      if(this.sDesempleo == 1){
+        this.seguroDesempleo6 = (this.cuotaPrestamo+this.seguroVehiculo+this.seguroVida)*(this.iPrendarioCars.values.unemploymentInsurance6/100)
+      }
+      if (this.sDesempleo == 2) {
+        this.seguroDesempleo12 = (this.cuotaPrestamo+this.seguroVehiculo+this.seguroVida)*(this.iPrendarioCars.values.unemploymentInsurance12/100)
+      }
+    }    
+  }
+  calculoSeguroVida(){
+    if(this.iPrendarioCars != undefined){
+      this.seguroVida = 0;
+      if(this.sVida){
+        this.seguroVida = this.montoFinanciar*(this.iPrendarioCars.values.lifeInsurance/100);
+      }
     }    
   }
 }

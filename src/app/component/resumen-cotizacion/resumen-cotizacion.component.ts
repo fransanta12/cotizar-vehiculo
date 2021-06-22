@@ -28,24 +28,24 @@ export class ResumenCotizacionComponent implements OnInit {
   seguroVehiculo:number=0;
   seguroVida:number=0;
   seguroDesempleo:number = 0
-  
+
   constructor() { 
   }
 
   ngOnInit(): void {
-  }
-
-  ngOnChanges() {
-    if(this.totalValor != undefined && this.primaCarro != undefined && this.iPrendarioCars != undefined){
+    if(this.totalValor != 0 && this.primaCarro != 0 && this.iPrendarioCars != undefined){
       this.MontoTotalFinanciar();
     }
   }
 
-  DatosDeuda(){
-    //this.deudaTotal.push({texto:"",valor:""})
+  ngOnChanges() {
+    if(this.totalValor != 0 && this.primaCarro != 0 && this.iPrendarioCars != undefined){
+      this.MontoTotalFinanciar();
+    }
   }
   
   MontoTotalFinanciar(){
+    debugger
     if(this.iPrendarioCars != undefined){
       this.montoFinanciar = this.totalValor-this.primaCarro;
       this.comision = this.montoFinanciar*this.iPrendarioCars.values.usd.years[0].commission;
@@ -53,16 +53,8 @@ export class ResumenCotizacionComponent implements OnInit {
       this.cuotaPrestamo = this.totalFinanciamiento * this.iPrendarioCars.values.cuota
       this.seguroVehiculo = this.cuotaPrestamo*this.iPrendarioCars.values.usd.years[0].insuranceCoverage.CoberturaA.value;
       this.seguroVida = this.montoFinanciar*this.iPrendarioCars.values.lifeInsurance;
-      // this.seguroDesempleo = this
     }
     
   }
-
-  // CuotaMensualTotal(){
-  //   if(this.iPrendarioCars != undefined){
-  //     let cuotaPrestamo = this.deudaTotal[2].detalleValor
-  //     this.cuotaTotal.push()
-  //   }
-  // }
 
 }

@@ -79,7 +79,15 @@ html,body {
     line-height: 1.5;
     text-align: left;
     height: 100%;
-}  
+}
+.spinner-carga{
+    position: absolute !important;
+    right: 43%;
+    top: 43%;
+}
+.spinner-carga .mat-progress-spinner circle, .mat-spinner circle{
+    stroke: #3A683D;
+}
 .contenedor-divisor{
     display: inline-flex;
     width: 49%;
@@ -89,6 +97,10 @@ html,body {
     min-height: 579.17px;
 }
 app-resumen-cotizacion{
+    width: 100%;
+    padding-left: 50px;
+}
+.app-resumen-cotizacion{
     width: 100%;
     padding-left: 50px;
 }
